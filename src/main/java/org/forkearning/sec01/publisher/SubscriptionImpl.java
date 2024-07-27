@@ -26,6 +26,7 @@ public class SubscriptionImpl implements Subscription {
         log.info("Subscriber has requested: {}", requestor);
         if(requestor > MAX_ITEMS){
             this.subscriber.onError(new RuntimeException("Requested item count is greater!"));
+            this.isCancelled = true; // Have to cancel this otherwise it will continue to publish when requested after the error
             return;
         }
         for (int i = 0; i < requestor && count< MAX_ITEMS; i++) {
