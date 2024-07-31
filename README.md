@@ -8,9 +8,9 @@
 
 # 3 important things:
 
-Publisher
-Subscriber 
-Subscription
+1. Publisher
+2. Subscriber 
+3. Subscription
 
 - Publisher has to subscribe using subscription
 
@@ -41,6 +41,10 @@ ______
 * stream of Messages
 * BackPressure(producer emits too much of data where consumer can't handle)
 * Many additional methods specific to handle specific streaming
+
+
+**Note:** If we don't hav ethe terminal operator stream will not execute. Look for **Le01LazyStream**
+
 
 
 
